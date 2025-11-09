@@ -30,7 +30,7 @@ const userSchema = new Schema({
         type: String, //cloudinary url
         required: true,
     },
-    covorImage: {
+    coverImage: {
         type: String
     },
     watchHistory: [
@@ -67,7 +67,7 @@ userSchema.methods.generateAccessToken = function(){
         _id: this.id,
         email: this.email,
         username: this.username,
-        fullname: this.fullname
+        fullName: this.fullName
         },
         process.env.ACCESS_TOKEN_SECRET,{
             expiresIn: process.env.ACCESS_TOKEN_EXPIRY
